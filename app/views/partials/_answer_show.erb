@@ -1,0 +1,13 @@
+<div class="answer">
+  <%= erb :'partials/_votes', locals: { votable: answer } %>
+	<p><span id='answer_content'><%= answer.content %></span> - <b><span id='comment_author'><%= answer.author.username %></span></b> <span style="font-size: .8em;"><span id='comment_created'><%= answer.created_at %></span></span></p>
+	<br>
+	<% if logged_in? %>
+		<%= erb :'partials/_comment_form', locals: { commentable: answer } %>
+	<% end %>
+  <div class="comment_indent">
+  	<% answer.comments.each do |comment| %>
+  		<%= erb :'partials/_show_comment', locals: { comment: comment } %>
+  	<% end %>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="nav">
+  <a href="/">Home</a>
+  <% if !logged_in? %>
+    <a href="/sessions/new">Login</a>
+    <a href="/users/new">Register</a>
+  <% else %>
+    <a href="/questions"><%= active_user.username %></a>
+    <form action="/sessions" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Logout">
+    </form>
+  <% end %>
+</div>

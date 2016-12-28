@@ -1,0 +1,5 @@
+<div class="comment">
+	<%= erb :'partials/_votes', locals: { votable: comment } %>
+	<p><span id='comment_content'><%= comment.content %></span> - <b><span id='comment_author'><%= comment.author.username %></span></b> <span style="font-size: .8em;"><span id='comment_created'><%= comment.created_at %></span></span></p>
+	<br>
+</div>

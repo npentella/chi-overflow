@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row" id="question">
+		<%= erb :'partials/_votes', locals: { votable: @question } %>
+		<h1><%= @question.title %> - </h1>
+		<h2><%= @question.content %></h2>
+		<br>
+		<p style="margin-top:15px;">By: <b><%= @question.author.username %></b> - <%= @question.created_at %></p>
+		<hr>
+		<div class="col-sm-10 col-sm-offset-1">
+			<% if logged_in? %>
+				<%= erb :'partials/_comment_form', locals: { commentable: @question } %>
+			<% else %>
+				<a href="/users/new">Join the conversation</a>
+			<% end %>
+			<h3>Comments</h3>
+			<div class="comments">
+				<% @question_comments.each do |q_comment| %>
+					<%= erb :'partials/_show_comment', locals: {comment: q_comment} %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="answers">
+		<hr>
+		<h2>Answers</h2>
+		<% @answers.each do |answer| %>
+			<%= erb :'partials/_answer_show', locals: {answer: answer} %><hr>
+		<% end %>
+	</div>
+	<div class="row" id="create_answer">
+		<%= erb :'partials/_answer_form' %>
+	</div>
+</div>
+
+

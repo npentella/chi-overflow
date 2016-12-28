@@ -1,0 +1,11 @@
+<div class="votes">
+	<form method="post" action="/<%= votable.class.name.downcase %>s/<%= votable.id %>/votes" >
+		<input type="hidden" name="vote_value" value="1">
+		<button class="upvote" type="submit" value="up"><i class="glyphicon glyphicon-chevron-up"></i></button>
+	</form>
+	<p class="vote_points"><%= votable.vote_sum %></p>
+	<form method="post" action="/<%= votable.class.name.downcase %>s/<%= votable.id %>/votes" >
+		<input type="hidden" name="vote_value" value="-1">
+		<button class="upvote" type="submit" value="down"><i class="glyphicon glyphicon-chevron-down"></i></button>
+	</form>
+</div>

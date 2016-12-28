@@ -1,0 +1,15 @@
+<% if logged_in? %>
+<div class="text-left col-sm-6 col-sm-offset-3 well">
+
+  <form id="answer-form" method="post" action="/questions/<%= @question.id %>/answers">
+
+    <div class="form-group">
+    <label for="content">Your Answer:<label><br>
+    <textarea class="form-control" rows="10" cols="70" id="comment" name="content"></textarea>
+    </div>
+
+    <input type="submit" class="btn btn-default" value="Submit">
+  </form>
+  </div>
+</div>
+<% end %>

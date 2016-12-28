@@ -1,0 +1,26 @@
+.upvote, .downvote {
+	border: none;
+	background-color: white;
+}
+
+.vote_points {
+	position: relative;
+	left: 8px;
+	/*bottom: 2px*/;
+}
+
+.votes {
+	display: inline;
+	float: left;
+	margin-right: 10px;
+}
+
+.comment, .answer {
+	clear: left;
+}
+
+.question-info {
+	font-style: italic;
+	font-size: 20px;
+	margin-top: 10px;
+}

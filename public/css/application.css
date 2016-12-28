@@ -1,0 +1,54 @@
+body {
+  padding-bottom: 200px;
+}
+
+#question h1,
+#question h2 {
+    display: inline;
+    line-height: 35px;
+}
+
+#question h2 {
+  font-size: 1.7em;
+}
+
+.comment h3,
+.comment p {
+  display: inline;
+}
+
+.comment h3 {
+  font-size: 1.3em;
+}
+
+.logout-button {
+  background-color: #F8F8F8;
+  border: none;
+  color: #999999;
+  padding: 15px 15px;
+}
+
+.errors {
+  color: red;
+}
+
+#answers h3 {
+  font-size: 1em;
+}
+
+#answer_content {
+  font-size: 1.6em;
+  line-height: 70px;
+  color: ;
+}
+
+#comment_content {
+  line-height: 70px;
+}
+
+.comment_indent {
+  margin: 10px 0px 0px 110px;
+}
+
+
+
