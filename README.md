@@ -16,3 +16,9 @@
   4. Votes (on questions, answers, and comments) 
 - Users who have authored a question can select their favorite answer for that question
 
+## Tech Stack:
+Ruby 2.3.1
+Sinatra
+JavScript
+Ajax/JQuery
+
